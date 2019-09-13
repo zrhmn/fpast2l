@@ -1,0 +1,7 @@
+*.test
+*.out
+*.so
+*.dylib
+*.dll
+*.exe
+*.exe~
