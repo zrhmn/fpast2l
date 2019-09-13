@@ -1,27 +1,25 @@
 # fpast2l
 
-[*PASETO*][what-is-paseto] is a specification for secure, stateless
-authentication tokens. This package implements *only* the secret/symmetric
-part of the [version 2][paseto-v2-spec] (`v2.local`) of *PASETO*.
+[![Documentation](https://godoc.org/github.com/zrhmn/fpast2l?status.svg)](http://godoc.org/github.com/zrhmn/fpast2l)
 
-There exists at least one implementation: [o1egl/paseto][o1egl-paseto], that
-covers the complete *PASETO* specification, is better written and better
-documented. You *most probably* should use that instead of *fpast2l*. The aim
-of *fpast2l* is not to be a complete (or even compatible) implementation of the
-*PASETO* standard. It is written to meet *specific* needs, and has no
-aspiration for any sort of general use. As such, feature requests and PRs
-adding unnecessary features will be ignored.
+[PASETO] is a specification for secure, stateless authentication tokens.
+[fpast2l] is Go implementation of only the secret/symmetric part of [version 2]
+of the PASETO spec.
 
-That said, the *one* aim is to implement `v2.local` token generation and
-verification in pure-Go, with the least amount of garbage possible. It's not
-currently *completely* garbage free, and most modifications in the near future
-will address just this. It is, however, reasonably fast, faster than [o1egl's
-implementation][o1egl-paseto] and aims to improve on that.
+There exists at least one implementation: [o1egl/paseto], that covers the
+complete PASETO specification, is probably better written and better
+documenting. You should be using that instead.
 
-### Contributing
-If the above makes sense and you're still interested, PRs addressing
-unnecessary heap-allocation, improving safety and performance (in that order of
-importance) are most welcome.
+The aim of fpast2l is not to be a complete or compatible implementation of the
+entire PASETO standard. It is written to meet specific needs and has no
+ambition for any sort of general use.
 
-[what-is-paseto]: https://github.com/paragonie/paseto
-[o1egl-paseto]: https://github.com/o1egl/paseto
+The key aim is to implement fast `v2.local` token generation in pure-Go with
+the least amount of garbage possible. It is currently not completely garbage
+free, which is what the roadmap will focus on. It is, however, slightly faster
+than o1egl's implementation and produces less garbage.
+
+[fpast2l]: #
+[o1egl/paseto]: https://github.com/o1egl/paseto
+[PASETO]: https://github.com/paragonie/paseto
+[version 2]: https://github.com/paragonie/paseto/blob/master/docs/01-Protocol-Versions/Version2.md
